@@ -3,12 +3,11 @@ function computerPlay() {
     return options[Math.floor(Math.random()*options.length)];
 }
 
-let getPlayerChoice = prompt("Choose rock, paper, or scissors.");
-
-let getComputerChoice = computerPlay();
+const playerDecision = prompt("Choose rock, paper, or scissors.");
 
 
-function answer(){
+
+function playRound(getPlayerChoice,getComputerChoice){
     if (getPlayerChoice.toUpperCase() === "ROCK" && getComputerChoice === "SCISSORS") {
         return "You win! Rock beats scissors."
     }
@@ -30,4 +29,20 @@ function answer(){
     else return "Its a tie!"
     }
 
-console.log(answer())
+const getPlayerChoice = "rock";
+const getComputerChoice = computerPlay();
+
+console.log(playRound(getPlayerChoice,getComputerChoice));
+
+
+
+
+
+
+
+
+
+
+
+
+
